@@ -1,0 +1,384 @@
+
+/* General page styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: black;
+  line-height: 1.5;
+}
+
+/* Header and navigation */
+.site-header {
+  background: white;
+  padding: 18px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  color: darkred;
+  font-size: 43px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  margin-top: 12px;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  margin: 4px 20px;
+  padding: 8px 10px;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  background: darkred;
+  color: white;
+}
+
+/* Main sections */
+main {
+  min-height: 70vh;
+}
+
+.hero,
+.section,
+.page-main {
+  padding: 35px 5%;
+}
+
+.hero {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.65)
+  ), url("../images/cinema.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 70px 50px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.eyebrow {
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+h2 {
+  line-height: 1.2;
+}
+
+.hero-art {
+  display: none;
+}
+
+/* Buttons */
+.button-row {
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin: 5px 5px 5px 0;
+  padding: 11px 16px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: darkred;
+}
+
+.button-secondary {
+  background: white;
+  color: red;
+  border: 1px solid #ccc;
+}
+
+.full-button {
+  display: block;
+  text-align: center;
+}
+
+/* Feature and movie cards */
+.section-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Desktop layout: 1024px and above */
+.feature-grid,
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card,
+.movie-card,
+.form-card {
+  background: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.feature-card {
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feature-icon {
+  font-size: 24px;
+}
+
+.callout {
+  margin: 20px 5%;
+  padding: 25px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.callout .eyebrow {
+  color: red;
+}
+
+/* Movie posters */
+.poster {
+  min-height: 250px;
+  padding: 25px 10px;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.poster small {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+.poster-blue {
+  background-image: url("../images/Zathura-A-Space Adventure.png");
+}
+
+.poster-pink {
+  background-image: url("../images/3-idiots.png");
+}
+
+.poster-gold {
+  background-image: url("../images/tom-jerry.png");
+}
+
+.poster-purple {
+  background-image: url("../images/the godfather.png");
+}
+
+.poster-green {
+  background-image: url("../images/advanture.png");
+}
+
+.poster-red {
+  background-image: url("../images/bird box.png");
+}
+
+/* Movie information */
+.movie-info {
+  padding: 18px;
+}
+
+.movie-info h2 {
+  margin-bottom: 5px;
+}
+
+.movie-meta,
+.movie-info p,
+.page-intro p {
+  color: black;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 3px 8px;
+  background: red;
+  color: white;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* Forms */
+.narrow-main {
+  max-width: 750px;
+  margin: auto;
+}
+
+.form-card {
+  padding: 22px;
+}
+
+.field {
+  margin-bottom: 17px;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+}
+
+.field-set {
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+}
+
+.radio-label {
+  display: inline-block;
+  margin: 5px 12px 5px 0;
+  font-weight: normal;
+}
+
+.form-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 15px;
+}
+
+/* Messages */
+.result-box {
+  margin-top: 20px;
+  padding: 18px;
+  background: red;
+  color: white;
+  border-radius: 8px;
+}
+
+.success-message {
+  padding: 12px;
+  background: red;
+  color: white;
+  border-radius: 7px;
+}
+
+/* Payment fields */
+.conditional-fields {
+  margin: 15px 0;
+  padding: 15px;
+  background: rgb(228, 93, 93);
+  border: 1px dashed red;
+  border-radius: 8px;
+}
+
+.notice {
+  color: #555;
+  font-size: 13px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Tablet layout: 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .feature-grid,
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav a {
+    margin: 4px 10px;
+  }
+
+  .hero {
+    padding: 50px 5%;
+  }
+}
+
+/* Mobile layout: 767px and below */
+@media (max-width: 767px) {
+
+  .feature-grid,
+  .movie-grid,
+  .form-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .page-main,
+  .hero,
+  .section {
+    padding: 25px 5%;
+  }
+
+  nav a {
+    margin: 4px;
+    padding: 7px;
+  }
+}
+
+/* Hide inactive payment fields */
+[hidden] {
+  display: none !important;
+}
