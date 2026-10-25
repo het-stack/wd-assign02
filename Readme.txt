@@ -59,7 +59,7 @@ Add your published Mercury URL here after you upload the project.
 
 GitHub repository link
 ----------------------
-Add your GitHub repository URL here after you create the repository.
+https://github.com/het-stack/wd-assign02
 
 References
 ----------
