@@ -47,15 +47,15 @@ The JavaScript automatically selects the movie from the booking link. It calcula
 total cost based on the movie and number of tickets. It also displays different fields depending on
 whether the user chooses voucher or online payment. Before submitting, it checks the name, email,
 phone number, screening date, ticket quantity, payment method, and payment details. If anything is
-incorrect, an error message appears and the form cannot be submitted.
+incorrect, an error message appears, and the form cannot be submitted.
 
 Known limitations
 -----------------
-the site very little amout of colour contrast 
+The site has very little amount of colour contrast, and I am not using the best way to link the URL for some of the buttons.
 
 Mercury link
 ------------
-Add your published Mercury URL here after you upload the project.
+https://mercury.swin.edu.au/cos10005/s105254776/wd_assign2_105254776/index.html
 
 GitHub repository link
 ----------------------
