@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Web Development" />
+    <meta name="keywords"    content="HTML and CSS" />
+    <meta name="author"      content="Het" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets | MovieRec</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">MovieRec</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="movies.html">Movies</a>
+      <a href="recommend.html">Recommendations</a><a href="register.html">Register</a>
+      <a href="booking.html" aria-current="page">Book Tickets</a>
+    </nav>
+  </header>
+
+  <main class="page-main narrow-main">
+    <section class="page-intro">
+      <p class="eyebrow">SAVE YOUR SEAT</p>
+      <h1>Book movie tickets</h1>
+      <p>Fill in the form to test the booking flow. Use fake details only. This demo does not process payments.</p>
+    </section>
+
+    <section class="form-card">
+      <form id="booking-form" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" novalidate>
+        
+        <div class="form-two-col">
+          <div class="field"><label for="full-name">Full name</label><input id="full-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="booking-email">Email address</label><input id="booking-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="booking-phone">Phone number</label><input id="booking-phone" name="phone" inputmode="numeric" required placeholder="At least 10 digits"></div>
+          <div class="field"><label for="movie-select">Movie selection</label>
+            <select id="movie-select" name="movie" required>
+              <option value="">Choose a movie</option>
+              <option value="Zathura: A Space Adventure">Zathura: A Space Adventure</option>
+              <option value="3 Idiots">3 Idiots</option>
+              <option value="Tom and Jerry: The Fast and the Furry">Tom and Jerry: The Fast and the Furry</option>
+              <option value="The Godfather">The Godfather</option>
+              <option value="Journey to the Center of the Earth">Journey to the Center of the Earth</option>
+              <option value="Bird Box">Bird Box</option>
+            </select>
+          </div>
+          <div class="field"><label for="screening">Screening date and time</label><input id="screening" name="screening" type="datetime-local" required></div>
+          <div class="field"><label for="tickets">Number of tickets</label><input id="tickets" name="tickets" type="number" min="1" value="1" required></div>
+          <div class="field"><label for="ticket-type">Ticket type</label><select id="ticket-type" name="ticket-type" required><option value="">Choose ticket type</option><option value="Adult">Adult</option><option value="Child">Child</option><option value="Student">Student</option></select></div>
+          <div class="field"><label for="ticket-price">Price per ticket</label><input id="ticket-price" name="ticket-price" readonly value="$0.00"></div>
+        </div>
+
+        <div class="field"><label for="special-requests">Special requests (optional)</label><textarea id="special-requests" name="special-requests" rows="3" placeholder="Any requests for your booking"></textarea></div>
+
+        <fieldset class="field-set"><legend>Payment method</legend>
+          <label class="radio-label"><input type="radio" name="payment-method" value="voucher" required> Voucher</label>
+          <label class="radio-label"><input type="radio" name="payment-method" value="online"> Online payment</label>
+        </fieldset>
+
+        <div id="voucher-fields" class="conditional-fields" hidden>
+          <div class="field"><label for="voucher-code">12-digit voucher code</label><input id="voucher-code" name="voucher-code" inputmode="numeric" maxlength="12" placeholder="Enter 12 digits"></div>
+        </div>
+
+        <div id="card-fields" class="conditional-fields" hidden>
+          <div class="field"><label for="card-type">Card type</label><select id="card-type" name="card-type"><option value="">Choose card type</option><option value="visa">Visa</option><option value="mastercard">Mastercard</option><option value="amex">American Express (Amex)</option></select></div>
+          <div class="field"><label for="card-number">Fake card number for testing</label><input id="card-number" name="card-number" inputmode="numeric" autocomplete="off" placeholder="16 digits, or 15 for Amex"></div>
+          <p class="notice">Use fake card information only. No payment will be processed.</p>
+        </div>
+
+        <div class="field"><label for="booking-cost">Estimated booking cost</label><input id="booking-cost" name="booking-cost" readonly value="$0.00"></div>
+
+        <div class="field-set">
+          <label class="radio-label"><input id="same-billing-email" type="checkbox"> Billing email is the same as my contact email</label>
+          <div class="field"><label for="billing-email">Billing email address</label><input id="billing-email" name="billing-email" type="email" required></div>
+        </div>
+
+        <button class="button" type="submit">Submit booking form</button>
+        <p class="notice">Do not use real personal or payment details.</p>
+      </form>
+    </section>
+  </main>
+  <footer><p>MovieRec is a student website demonstration. No real tickets or payments are processed.</p></footer>
+</body>
+</html>

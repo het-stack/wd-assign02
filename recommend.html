@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Web Development" />
+    <meta name="keywords"    content="HTML and CSS" />
+    <meta name="author"      content="Het" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations | MovieRec</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">MovieRec</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="movies.html">Movies</a>
+      <a href="recommend.html" aria-current="page">Recommendations</a>
+      <a href="register.html">Register</a><a href="booking.html">Book Tickets</a>
+    </nav>
+  </header>
+
+  <main class="page-main narrow-main">
+    <section class="page-intro">
+      <p class="eyebrow">A FILM THAT FITS YOUR MOOD</p>
+      <h1>Find your movie match</h1>
+      <p>Choose your preferences and MovieRec will suggest a film using simple rules.</p>
+    </section>
+
+    <section class="form-card">
+      <form id="recommend-form">
+        <div class="field">
+          <label for="genre">Preferred genre</label>
+          <select id="genre" name="genre" required>
+            <option value="">Choose a genre</option>
+            <option>Action</option><option>Comedy</option><option>Animation</option>
+            <option>Drama</option><option>Adventure</option><option>Thriller</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="age-group">Age group</label>
+          <select id="age-group" name="age-group" required>
+            <option value="">Choose an age group</option>
+            <option value="child">Child</option><option value="teen">Teen</option><option value="adult">Adult</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="viewing">Viewing preference</label>
+          <select id="viewing" name="viewing" required>
+            <option value="">Choose a viewing preference</option>
+            <option value="family">Family</option><option value="date">Date Night</option>
+            <option value="friends">Friends</option><option value="solo">Solo</option>
+          </select>
+        </div>
+        <button class="button" type="submit">Recommend a movie</button>
+      </form>
+      <div id="recommend-result" class="result-box" aria-live="polite">
+        <h2>Your recommendation will appear here</h2>
+        <p>Complete the three choices above to get started.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>MovieRec is a student website demonstration. No real tickets or payments are processed.</p></footer>
+</body>
+</html>

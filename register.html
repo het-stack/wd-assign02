@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Web Development" />
+    <meta name="keywords"    content="HTML and CSS" />
+    <meta name="author"      content="Het" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | MovieRec</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">MovieRec</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="movies.html">Movies</a>
+      <a href="recommend.html">Recommendations</a><a href="register.html" aria-current="page">Register</a>
+      <a href="booking.html">Book Tickets</a>
+    </nav>
+  </header>
+
+  <main class="page-main narrow-main">
+    <section class="page-intro">
+      <p class="eyebrow">JOIN MovieRec</p>
+      <h1>Create your account</h1>
+      <p>This is a front-end demonstration form. It does not create a real account or store your details.</p>
+    </section>
+
+    <section class="form-card">
+      <form id="register-form" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" novalidate>
+        
+        <div class="field"><label for="username">Username</label><input id="username" name="username" autocomplete="username" required minlength="5" placeholder="At least 5 letters, numbers or underscores"></div>
+        <div class="field"><label for="register-email">Email address</label><input id="register-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+        <div class="field"><label for="register-phone">Phone number</label><input id="register-phone" name="phone" inputmode="numeric" required placeholder="8–15 digits"></div>
+        <div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="new-password" required placeholder="At least 10 characters"></div>
+        <div class="field"><label for="confirm-password">Confirm password</label><input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" required></div>
+        <fieldset class="field-set"><legend>Gender</legend>
+          <label class="radio-label"><input type="radio" name="gender" value="female" required> Female</label>
+          <label class="radio-label"><input type="radio" name="gender" value="male"> Male</label>
+          <label class="radio-label"><input type="radio" name="gender" value="other"> Other</label>
+          <label class="radio-label"><input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say</label>
+        </fieldset>
+        <fieldset class="field-set"><legend>Preferred movie genres</legend>
+          <label class="radio-label"><input type="checkbox" name="preferred-genre" value="Action"> Action</label>
+          <label class="radio-label"><input type="checkbox" name="preferred-genre" value="Comedy"> Comedy</label>
+          <label class="radio-label"><input type="checkbox" name="preferred-genre" value="Animation"> Animation</label>
+          <label class="radio-label"><input type="checkbox" name="preferred-genre" value="Drama"> Drama</label>
+          <label class="radio-label"><input type="checkbox" name="preferred-genre" value="Adventure"> Adventure</label>
+          <label class="radio-label"><input type="checkbox" name="preferred-genre" value="Thriller"> Thriller</label>
+        </fieldset>
+        <div class="field"><label for="country">Country / region</label>
+          <select id="country" name="country" required><option value="">Choose a country or region</option><option>Australia</option><option>New Zealand</option><option>India</option><option>United Kingdom</option><option>United States</option><option>Other</option></select>
+        </div>
+        <button class="button" type="submit">Create account</button>
+        <p id="register-success" class="success-message" role="status" hidden></p>
+      </form>
+    </section>
+  </main>
+  <footer><p>Demo only: do not enter a real password or sensitive personal information.</p></footer>
+</body>
+</html>
